@@ -16,7 +16,7 @@
             <div id="circle">
                 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="300px" height="300px" viewBox="0 0 300 300" enable-background="new 0 0 300 300" xml:space="preserve">
                     <defs>
-                    <path id="circlePath" d=" M 150, 150 m -60, 0 a 60,60 0 0,1 120,0 a 60,60 0 0,1 -120,0 "/>
+                    <path id="circlePath" d=" M 150, 150 m -120, 0 a 120,120 0 0,1 240,0 a 120,120 0 0,1 -240,0 "/>
                     </defs>
                     <circle cx="150" cy="100" r="75" fill="none"/>
                     <g>
@@ -26,9 +26,11 @@
                     </text>
                     </g>
                 </svg>
-        </div>
+            </div>
 
-        <div style="max-width: 48rem; margin: 0 auto;">
+        <div style="max-width: 48rem; margin: 0 auto; z-index: 10">
+            <div style="height: 1px; margin-bottom: 20px"></div>
+
             <h2 style="margin-top: 0px">The party</h2>
 
             <h1>
@@ -40,7 +42,11 @@
             probably at like 8pm on Saturday the twenty-third of October
 
 
-            <h2>Frequently asked questions</h2>
+            <div class="header-container">
+                <img class="header-gif reverse-image" src="public/images/jackolantern.gif" />
+                <h2>Frequently asked questions</h2>
+                <img class="header-gif" src="public/images/jackolantern.gif" />
+            </div>
             <ul>
                 <details id="what-is-this">
                     <summary>why am i on this goddamn website?</summary>
@@ -100,32 +106,24 @@
             </ul>
 
             <div class="header-container">
-                <img class="dancing-skeleton" src="public/images/dancing-skeleton.gif" />
+                <img class="header-gif" src="public/images/dancing-skeleton.gif" />
                 <h2>Spotify Playlist</h2>
-                <img class="dancing-skeleton reverse-image" src="public/images/dancing-skeleton.gif" />
+                <img class="header-gif reverse-image" src="public/images/dancing-skeleton.gif" />
             </div>
-            Who puts Melvins on a party playlist?
+            who puts Melvins on a party playlist?
             <br>
-            Help dilute Travis' obnoxious music taste with some song suggestions from this decade
+            help dilute travis' obnoxious music taste with some song suggestions from this decade
             <br>
-            All suggestions must pass the vibe check
+            all suggestions must pass the vibe check
             <br>
+            <div style="height: 1px; margin-bottom: 20px"></div>
             <iframe src="https://open.spotify.com/embed/playlist/21Q34pejyX6l6yhWYJYtbD?theme=0" width="100%" height="380" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-            <div class="divider-bottom"></div>
+
+            <div style="height: 1px; margin-top: 20px"></div>
         </div>
 
         <script type="text/javascript">
             window.addEventListener("DOMContentLoaded", (event) => {
-                // const details = document.getElementsByTagName("details");
-                // for (let i = 0; i < details.length; i++) {
-                //     details[i].addEventListener("toggle", (event) => {
-                //         if (details[i].open) {
-                //             new Audio("public/audio/taco-bell-open.mp3").play();
-                //         } else {
-                //             new Audio("public/audio/taco-bell-close.mp3").play();
-                //         }
-                //     });
-                // }
                 const whatIsThis = document.getElementById("what-is-this");
                 whatIsThis.addEventListener("toggle", (event) => {
                     if (event.target.open) {

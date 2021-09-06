@@ -13,11 +13,6 @@
 }
 
 #circle {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
     pointer-events: none;
 }
 
@@ -25,7 +20,7 @@
     left: 0;
     top: 0;
     width: 100%;
-    height: 30rem;
+    height: 15rem;
 
     animation-name: rotate;
     animation-duration: 5s;
@@ -34,7 +29,7 @@
 }
 
 #circle text {
-    font-size: 1.4rem;
+    font-size: 2.7rem;
     font-weight: bold;
 }
 
@@ -60,21 +55,11 @@ details:not(:last-child) {
     justify-content: center;
 }
 
-.dancing-skeleton {
+.header-gif {
     height: 125px;
 }
 
 .reverse-image {
     -webkit-transform: scaleX(-1);
     transform: scaleX(-1);
-}
-
-.dancing-skeleton-container {
-    display: flex;
-    flex-direction: column;
-}
-
-.divider-bottom {
-    height: 1px;
-    margin-top: 20px;
 }
