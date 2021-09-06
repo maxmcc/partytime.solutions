@@ -6,7 +6,13 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="stylesheet" type="text/css" href="index.css">
     </head>
-    <body>
+    <style>
+        body {
+            background-image: url("public/images/nether.gif");
+            background-repeat: repeat;
+        }
+    </style>
+    <body style="margin: 0">
             <div id="circle">
                 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="300px" height="300px" viewBox="0 0 300 300" enable-background="new 0 0 300 300" xml:space="preserve">
                     <defs>
@@ -23,19 +29,20 @@
         </div>
 
         <div style="max-width: 48rem; margin: 0 auto;">
-            <h2>The party</h2>
+            <h2 style="margin-top: 0px">The party</h2>
 
             <h1>
-                Frankensteiner Halloween party
+                Frankensteiner: A Halloween Extravaganza
             </h1>
 
             it's happening
+            <br>
             probably at like 8pm on Saturday the twenty-third of October
 
 
             <h2>Frequently asked questions</h2>
             <ul>
-                <details>
+                <details id="what-is-this">
                     <summary>why am i on this goddamn website?</summary>
                     <ul>
                         <li>Max and Travis are having a party</li>
@@ -47,7 +54,7 @@
                     </ul>
                 </details>
 
-                <details>
+                <details id="invite">
                     <summary>sounds <em>rad</em>, Can i come to the party?</summary>
                     <ul>
                         <li>You have to RSVP</li>
@@ -59,7 +66,7 @@
                     </ul>
                 </details>
 
-                <details>
+                <details id="covid">
                     <summary>ok, but what about the 'vid?</summary>
                     <ul>
                         <li>Again, get vaccinated or don't come</li>
@@ -75,7 +82,7 @@
                     </ul>
                 </details>
 
-                <details>
+                <details id="byob">
                     <summary>you've convinced me, can i bring anything?</summary>
                     <ul>
                         <li>a smile 👉👈</li>
@@ -92,29 +99,67 @@
                 </details>
             </ul>
 
-            <h2>Spotify Playlist</h2>
+            <div class="header-container">
+                <img class="dancing-skeleton" src="public/images/dancing-skeleton.gif" />
+                <h2>Spotify Playlist</h2>
+                <img class="dancing-skeleton reverse-image" src="public/images/dancing-skeleton.gif" />
+            </div>
             Who puts Melvins on a party playlist?
-            Help dilute Travis' obnoxious music taste with some song suggestions
+            <br>
+            Help dilute Travis' obnoxious music taste with some song suggestions from this decade
+            <br>
+            All suggestions must pass the vibe check
+            <br>
             <iframe src="https://open.spotify.com/embed/playlist/21Q34pejyX6l6yhWYJYtbD?theme=0" width="100%" height="380" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+            <div class="divider-bottom"></div>
         </div>
 
         <script type="text/javascript">
             window.addEventListener("DOMContentLoaded", (event) => {
-                const details = document.getElementsByTagName("details");
-                for (let i = 0; i < details.length; i++) {
-                    details[i].addEventListener("toggle", (event) => {
-                        if (details[i].open) {
-                            new Audio("public/audio/taco-bell-open.mp3").play();
-                        } else {
-                            new Audio("public/audio/taco-bell-close.mp3").play();
-                        }
-                    });
-                }
+                // const details = document.getElementsByTagName("details");
+                // for (let i = 0; i < details.length; i++) {
+                //     details[i].addEventListener("toggle", (event) => {
+                //         if (details[i].open) {
+                //             new Audio("public/audio/taco-bell-open.mp3").play();
+                //         } else {
+                //             new Audio("public/audio/taco-bell-close.mp3").play();
+                //         }
+                //     });
+                // }
+                const whatIsThis = document.getElementById("what-is-this");
+                whatIsThis.addEventListener("toggle", (event) => {
+                    if (event.target.open) {
+                        new Audio("public/audio/storm.mp3").play();
+                    }
+                });
+
+                const invite = document.getElementById("invite");
+                invite.addEventListener("toggle", (event) => {
+                    if (event.target.open) {
+                        new Audio("public/audio/crash.mp3").play();
+                    }
+                });
+
+                const covid = document.getElementById("covid");
+                covid.addEventListener("toggle", (event) => {
+                    if (event.target.open) {
+                        new Audio("public/audio/scream.mp3").play();
+                    }
+                });
+
+                const byob = document.getElementById("byob");
+                byob.addEventListener("toggle", (event) => {
+                    if (event.target.open) {
+                        new Audio("public/audio/taco-bell-open.mp3").play();
+                    }
+                });
 
                 const turnOffTacoBell = document.getElementById("turn-off-taco-bell");
                 turnOffTacoBell.addEventListener("toggle", (event) => {
                     if (event.target.open) {
                         new Audio("public/audio/taco-bell-boosted.mp3").play();
+                    }  else {
+                        new Audio("public/audio/taco-bell-close.mp3").play();
                     }
                 });
             });

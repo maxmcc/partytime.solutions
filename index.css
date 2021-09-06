@@ -4,11 +4,12 @@
     box-sizing: border-box;
     font-size: 20px;
     font-family: "Times New Roman", "Times", serif;
-    color: red;
+    color: white;
     margin: 0;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     line-height: 1.15;
+    text-shadow: 1px 1px black
 }
 
 #circle {
@@ -33,7 +34,7 @@
 }
 
 #circle text {
-    font-size: 1rem;
+    font-size: 1.4rem;
     font-weight: bold;
 }
 
@@ -53,4 +54,27 @@ details:not(:last-child) {
     margin-bottom: 1.5em;
 }
 
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
+.dancing-skeleton {
+    height: 125px;
+}
+
+.reverse-image {
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+
+.dancing-skeleton-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.divider-bottom {
+    height: 1px;
+    margin-top: 20px;
+}
