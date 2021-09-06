@@ -1,6 +1,6 @@
 
 :root {
-    background-color: #22292f;
+    background-color: purple;
     box-sizing: border-box;
     font-size: 20px;
     font-family: "Times New Roman", "Times", serif;
@@ -63,3 +63,18 @@ details:not(:last-child) {
     -webkit-transform: scaleX(-1);
     transform: scaleX(-1);
 }
+
+/* .freebirdFormviewerViewFooterEmbeddedBackground {
+    visibility: hidden;
+    height: 0;
+}
+
+.freebirdFormviewerViewNavigationPasswordWarning {
+    visibility: hidden;
+    height: 0;
+}
+
+.freebirdFormviewerViewNoPadding {
+    visibility: hidden;
+    height: 0;
+} */
