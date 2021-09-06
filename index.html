@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" type="text/css" href="index.css">
+    </head>
+    <body>
+            <div id="circle">
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="300px" height="300px" viewBox="0 0 300 300" enable-background="new 0 0 300 300" xml:space="preserve">
+                    <defs>
+                    <path id="circlePath" d=" M 150, 150 m -60, 0 a 60,60 0 0,1 120,0 a 60,60 0 0,1 -120,0 "/>
+                    </defs>
+                    <circle cx="150" cy="100" r="75" fill="none"/>
+                    <g>
+                    <use xlink:href="#circlePath" fill="none"/>
+                    <text fill="red">
+                    <textPath xlink:href="#circlePath">Welcome to partytime.solutions</textPath>
+                    </text>
+                    </g>
+                </svg>
+        </div>
+
+        <div style="max-width: 48rem; margin: 0 auto;">
+            <h2>The party</h2>
+
+            <h1>
+                Frankensteiner Halloween party
+            </h1>
+
+            it's happening
+            probably at like 8pm on Saturday the twenty-third of October
+
+            <h2>safety & covid contingencies</h2>
+            get vaccinated! as many times as you can! keep going!
+
+
+            <h2>Frequently asked questions</h2>
+            <ul>
+                <details>
+                    <summary>why am i on this goddamn website?</summary>
+                    <ul>
+                        <li>Max and Travis are having a party</li>
+                        <li>clearly they invited you, because you are here</li>
+                        <li>We didn't remember our Facebook passwords so we made this website</li>
+                        <ul>
+                            <li>also, fuck Facebook, and especially fuck facebook events</li>
+                        </ul>
+                    </ul>
+                </details>
+
+                <details>
+                    <summary>sounds <em>rad</em>, Can i come to the party</summary>
+                    <ul>
+                        <li>You have to RSVP</li>
+                        <li>You have to be fully vaccinated</li>
+                        <li>You have to come in costume</li>
+                        <li>You have to know Max or Travis personally, or one of the guests, rather than
+                            just being some random person on the internet who found this website.</li>
+                        <li>ask a punk for the address</li>
+                    </ul>
+                </details>
+
+                <details id="turn-off-taco-bell">
+                    <summary>can i turn off the taco bell noise</summary>
+                    what taco bell noise?
+                </details>
+            </ul>
+        </div>
+
+        <script type="text/javascript">
+            window.addEventListener("DOMContentLoaded", (event) => {
+                const details = document.getElementsByTagName("details");
+                for (let i = 0; i < details.length; i++) {
+                    details[i].addEventListener("toggle", (event) => {
+                        if (details[i].open) {
+                            new Audio("public/audio/taco-bell-open.mp3").play();
+                        } else {
+                            new Audio("public/audio/taco-bell-close.mp3").play();
+                        }
+                    });
+                }
+
+                const turnOffTacoBell = document.getElementById("turn-off-taco-bell");
+                turnOffTacoBell.addEventListener("toggle", (event) => {
+                    if (event.target.open) {
+                        new Audio("public/audio/taco-bell-boosted.mp3").play();
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>

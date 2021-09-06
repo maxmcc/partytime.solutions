@@ -1,0 +1,57 @@
+
+:root {
+    background-color: #22292f;
+    box-sizing: border-box;
+    font-size: 20px;
+    font-family: "Times New Roman", "Times", serif;
+    color: red;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    line-height: 1.15;
+}
+
+#circle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-bottom: 100%;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+#circle svg {
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 30rem;
+
+    animation-name: rotate;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+#circle text {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+
+@keyframes rotate {
+    from { transform: rotate(360deg); }
+    to { transform: rotate(0); }
+}
+
+@media(prefers-reduced-motion) {
+    * {
+        animation: none !important;
+    }
+}
+
+details:not(:last-child) {
+    margin-bottom: 1.5em;
+}
+
+
