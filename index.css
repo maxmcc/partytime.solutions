@@ -239,9 +239,18 @@ details:not(:last-child) {
 #cursed {
   display: none
 }
+#cursedText {
+    display: none
+}
 #popup:hover #cursed {
   display: block
 }
+#popup:hover #cursedText {
+    display: block
+  }
 #popup:hover #normal {
   display: none
 }
+#popup:hover #normalText {
+    display: none
+  }
