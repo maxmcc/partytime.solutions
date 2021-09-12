@@ -12,6 +12,15 @@
     text-shadow: 1px 1px black
 }
 
+.link, .link:visited {
+    color: white !important;
+    text-decoration: underline;
+}
+
+.link:not(:last-child) {
+    margin-right: 40px;
+}
+
 #circle {
     pointer-events: none;
 }
