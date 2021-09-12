@@ -7,19 +7,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="stylesheet" type="text/css" href="index.css">
     </head>
-    <style>
-        body {
-            background-image: url("public/images/nether.gif");
-            background-repeat: repeat;
-        }
-    </style>
     <body style="margin: 0" class="timesNewRoman">
         <img src="public/images/mazegame.jpeg" class="mazeGame" id="mazeGame"></img>
 
         <div style="height: 1px; margin-bottom: 2rem;"></div>
 
         <div class="header-container" style="margin-bottom: 20px;">
-            <img class="ghostLeft" src="public/images/ghost.gif"></img>
             <div id="circle">
                 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="300px" height="300px" viewBox="0 0 300 300" enable-background="new 0 0 300 300" xml:space="preserve">
                     <defs>
@@ -34,18 +27,39 @@
                     </g>
                 </svg>
             </div>
-            <img class="ghostRight" src="public/images/ghost.gif"></img>
+            <img src="public/images/jackolantern.gif" class="title_jackolantern"/>
+
         </div>
 
         <div style="max-width: 960px; margin: 0 auto; z-index: 10">
-            <div class="header-container" style="margin-bottom: 2rem;">
-                <img class="header-gif reverse-image" src="public/images/jackolantern.gif" />
+            <div class="monster-mash">
+                <marquee behavior="alternate" scrollamount="10">
+                    <img class="mobile-ghosts" src="public/images/ghost.gif"></img>
+                </marquee>
+                <img class="mobile-ghosts" src="public/images/bat.gif"></img>
+                <marquee behavior="alternate" scrollamount="10" direction="right">
+                    <img class="mobile-ghosts reverse-image" src="public/images/ghost.gif"></img>
+                </marquee>
+            </div>
+
+            <div class="header-container" style="margin-bottom: 10px;">
+                <img class="ghostLeft ghost-busters" src="public/images/ghost.gif"></img>
                 <div style="text-align: center">
                     <aside>You are cordially invited to</aside>
                     <h1 style="margin: 0px 0px 10px 0px">FrankenSteiner</h1>
                     <h2 style="font-size: 22px; margin: 0px 0px 10px 0px;">A Halloween Extravaganza</h2>
                 </div>
-                <img class="header-gif" src="public/images/jackolantern.gif" />
+                <img class="ghostRight ghost-busters" src="public/images/ghost.gif"></img>
+            </div>
+
+            <div class="monster-mash">
+                <marquee behavior="alternate" scrollamount="10">
+                    <img class="mobile-ghosts" src="public/images/ghost.gif"></img>
+                </marquee>
+                <img class="mobile-ghosts" src="public/images/bat.gif"></img>
+                <marquee behavior="alternate" scrollamount="10" direction="right">
+                    <img class="mobile-ghosts reverse-image" src="public/images/ghost.gif"></img>
+                </marquee>
             </div>
 
             <br>
@@ -56,9 +70,9 @@
 
             <div style="text-align: center;">
                 <h2>it's happening!</h2>
-                <h2>at like 8pm on Friday the twenty-second of October</h2>
+                <h3>at like 8pm on Friday the twenty-second of October</h3>
 
-                <aside>
+                <aside class="calendar_aside">
                     <a class="link" target="_blank"
                        href="https://calendar.google.com/event?action=TEMPLATE&tmeid=XzY1MmowY3BwNjkxNGNiOWs2OTFrY2I5azZ0MjQyYjlvOHAxM2FiYTE4aDEzMmMxZzc0cTQ0ZTltOGcgbWF4bGxtY2NhcnRoeUBt&tmsrc=
 %6d%61%78%6c%6c%6d%63%63%61%72%74%68%79%40%67%6d%61%69%6c%2e%63%6f%6d">
@@ -73,7 +87,7 @@
 
             <div class="header-container">
                 <img class="header-gif" src="public/images/frankenstein.gif" />
-                <h2>Frequently asked questions</h2>
+                <h2>FAQ</h2>
                 <img class="header-gif reverse-image" src="public/images/frankenstein.gif" />
             </div>
             <ul>

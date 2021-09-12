@@ -9,16 +9,35 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     line-height: 1.15;
-    text-shadow: 1px 1px black
+    text-shadow: 1px 1px black;
+    overflow-x: hidden;
+    background-image: url("public/images/nether.gif");
+    background-repeat: repeat;
+}
+
+body {
+    background-color: transparent !important;
+}
+
+.monster-mash {
+    display: flex;
+}
+
+@media only screen and (min-width: 600px) {
+    .monster-mash {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .ghost-busters {
+        display: none
+    }
 }
 
 .link, .link:visited {
     color: white !important;
     text-decoration: underline;
-}
-
-.link:not(:last-child) {
-    margin-right: 40px;
 }
 
 #circle {
@@ -39,6 +58,33 @@
 #circle text {
     font-size: 54px;
     font-weight: bold;
+}
+
+.calendar_aside {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.title_jackolantern {
+    height: 200px;
+    position: absolute;
+    animation-name: jackolantern;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.mobile-ghosts {
+    height: 80px;
+}
+
+@keyframes jackolantern {
+    0% {height: 175px; transform: rotate(0)}
+    25% {height: 150px}
+    50% {height: 175px}
+    75% {height: 200px}
+    100% {height: 175px; transform: rotate(360deg)}
 }
 
 
@@ -145,7 +191,7 @@ details:not(:last-child) {
 }
 
 .popupContainer {
-    width: 400px;
+    width: 370px;
     display: flex;
     flex-direction: column;
     background: lightgray;
@@ -222,11 +268,11 @@ details:not(:last-child) {
 }
 
 @keyframes ghostLeft {
-    0% {margin-bottom: 100px; margin-right: 20px; height: 100px}
+    0% {margin-bottom: 0px; margin-right: 20px; height: 100px}
     25% {margin-right: 40px; height: 80px}
     50% {margin-bottom: -100px; margin-right: 20px; height: 100px}
     75% {margin-right: 0px; height: 120px}
-    100% {margin-bottom: 100px; margin-right: 20px; height: 100px}
+    100% {margin-bottom: 0px; margin-right: 20px; height: 100px}
 }
 
 .ghostRight {
@@ -238,11 +284,11 @@ details:not(:last-child) {
 }
 
 @keyframes ghostRight {
-    0% {margin-bottom: 100px; margin-left: 20px; height: 100px}
+    0% {margin-bottom: 0px; margin-left: 20px; height: 100px}
     25% {margin-left: 40px; height: 80px}
     50% {margin-bottom: -100px; margin-left: 20px; height: 100px}
     75% {margin-left: 0px; height: 120px}
-    100% {margin-bottom: 100px; margin-left: 20px; height: 100px}
+    100% {margin-bottom: 0px; margin-left: 20px; height: 100px}
 }
 
 #cursed {
