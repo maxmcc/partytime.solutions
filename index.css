@@ -262,4 +262,16 @@ details:not(:last-child) {
 }
 #popup:hover #normalText {
     display: none
-  }
+}
+
+.mazeGame {
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    pointer-events: none;
+    visibility: hidden;
+}
+
+.mazeGameVisible {
+    visibility: visible;
+}

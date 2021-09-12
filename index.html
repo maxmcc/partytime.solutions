@@ -13,6 +13,8 @@
         }
     </style>
     <body style="margin: 0" class="timesNewRoman">
+        <img src="public/images/mazegame.jpeg" class="mazeGame" id="mazeGame"></img>
+
         <div style="height: 1px; margin-bottom: 2rem;"></div>
 
         <div class="header-container" style="margin-bottom: 20px;">
@@ -219,6 +221,26 @@
                         new Audio("public/audio/taco-bell-close.mp3").play();
                     }
                 });
+            });
+        </script>
+
+        <script>
+            const activate = () => {
+                const mazeGame = document.getElementById("mazeGame");
+                mazeGame.classList.add('mazeGameVisible');
+
+                new Audio('public/audio/maze_game_scream.m4a').play();
+
+                setTimeout(() => {
+                    mazeGame.classList.remove('mazeGameVisible');
+                }, 5000)
+            }
+
+            let cursor = 0;
+            const KONAMI_CODE = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65];
+            document.addEventListener('keydown', (e) => {
+                cursor = (e.keyCode == KONAMI_CODE[cursor]) ? cursor + 1 : 0;
+                if (cursor == KONAMI_CODE.length) activate();
             });
         </script>
     </body>
