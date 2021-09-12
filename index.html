@@ -212,7 +212,9 @@
                 const turnOffTacoBell = document.getElementById("turn-off-taco-bell");
                 turnOffTacoBell.addEventListener("toggle", (event) => {
                     if (event.target.open) {
-                        new Audio("public/audio/taco-bell-boosted.mp3").play();
+                        const tacoBellBoosted = new Audio("public/audio/taco-bell-boosted.mp3");
+                        tacoBellBoosted.volume = 0.05;
+                        tacoBellBoosted.play();
                     }  else {
                         new Audio("public/audio/taco-bell-close.mp3").play();
                     }
