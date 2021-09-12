@@ -21,12 +21,39 @@ body {
 
 .monster-mash {
     display: flex;
+    justify-content: center;
 }
 
 @media only screen and (min-width: 600px) {
     .monster-mash {
         display: none;
     }
+}
+
+.boring-left-ghost {
+    animation-name: boringLeftGhost;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes boringLeftGhost {
+    0% {margin-right: 0px}
+    50% {margin-right: 60px}
+    100% {margin-right: 0px}
+}
+
+.boring-right-ghost {
+    animation-name: boringRightGhost;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes boringRightGhost {
+    0% {margin-left: 0px}
+    50% {margin-left: 60px}
+    100% {margin-left: 0px}
 }
 
 @media only screen and (max-width: 600px) {
@@ -250,13 +277,6 @@ details:not(:last-child) {
     0% { color: white; }
     33% { color: blue }
     66% { color: red }
-}
-
-.marquee {
-    display: block;
-    left: 0;
-    position: absolute;
-    top: 0;
 }
 
 .ghostLeft {
