@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="theme-color" content="#3705A5">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="stylesheet" type="text/css" href="index.css">
     </head>
@@ -172,7 +173,7 @@
                     <div class="popupText">
                         <span class="popupTitle">Congratulations!</span>
                         <span style="font-size: 14px;" id="normalText">Woe to you, oh Earth and Sea, your'e the 666th visiter of this site :)</span>
-                        <span style="font-size: 14px;" id="cursedText">Woe to you, oh Earth and Sea, your'e the 666th visiter of this site >:)</span>
+                        <span style="font-size: 14px;" id="cursedText">Woe to you, oh Earth and Sea, your'e the 666th visiter of this site &gt;:)</span>
                         <a class="popupButton" href="https://www.youtube.com/watch?v=eZFT7odS-2I&ab_channel=tanadi">Claim your prize</a>
                     </div>
                 </div>
@@ -184,41 +185,41 @@
         <script type="text/javascript">
             window.addEventListener("DOMContentLoaded", (event) => {
                 const whatIsThis = document.getElementById("what-is-this");
-                whatIsThis.addEventListener("toggle", (event) => {
-                    if (event.target.open) {
+                whatIsThis.addEventListener("click", (event) => {
+                    if (!whatIsThis.open) {
                         new Audio("public/audio/storm.mp3").play();
                     }
                 });
 
                 const invite = document.getElementById("invite");
-                invite.addEventListener("toggle", (event) => {
-                    if (event.target.open) {
+                invite.addEventListener("click", (event) => {
+                    if (!invite.open) {
                         new Audio("public/audio/crash.mp3").play();
                     }
                 });
 
                 const covid = document.getElementById("covid");
-                covid.addEventListener("toggle", (event) => {
-                    if (event.target.open) {
+                covid.addEventListener("click", (event) => {
+                    if (!covid.open) {
                         new Audio("public/audio/scream.mp3").play();
                     }
                 });
 
                 const byob = document.getElementById("byob");
-                byob.addEventListener("toggle", (event) => {
-                    if (event.target.open) {
+                byob.addEventListener("click", (event) => {
+                    if (!byob.open) {
                         new Audio("public/audio/taco-bell-open.mp3").play();
                     }
                 });
 
                 const turnOffTacoBell = document.getElementById("turn-off-taco-bell");
-                turnOffTacoBell.addEventListener("toggle", (event) => {
-                    if (event.target.open) {
+                turnOffTacoBell.addEventListener("click", (event) => {
+                    if (turnOffTacoBell.open) {
+                        new Audio("public/audio/taco-bell-close.mp3").play();
+                    } else {
                         const tacoBellBoosted = new Audio("public/audio/taco-bell-boosted.mp3");
                         tacoBellBoosted.volume = 0.05;
                         tacoBellBoosted.play();
-                    }  else {
-                        new Audio("public/audio/taco-bell-close.mp3").play();
                     }
                 });
             });
