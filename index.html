@@ -6,117 +6,10 @@
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="stylesheet" href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css"/>
-<style type="text/css">
-form { padding: 0 !important; }
-a.ff-powered-img {
-    visibility: hidden !important;
-}
-.ff-powered-img img { display: none !important; }
-
-.ff-title {
-    display: none;
-}
-
-.ff-message {
-    margin-bottom: 2rem !important;
-}
-
-label {
-    font-size: 1rem;
-    font-weight: bold;
-    display: block;
-    margin-bottom: .5rem;
-}
-
-small.ff-help {
-    font-size: 1rem;
-    color: rgba(0,0,0,0.8);
-}
-
-label.form-check-label {
-    padding-left: .5rem;
-}
-
-button {
-    all: unset;
-}
-
-button.btn-primary:active,
-button.btn-secondary:active {
-    opacity: .8;
-    transition: opacity .15s ease-out;
-}
-button.btn-primary:focus,
-button.btn-primary:hover,
-button.btn-secondary:focus,
-button.btn-secondary:hover {
-    opacity: .5;
-}
-
-button.btn-primary {
-    color: #fff;
-    background-color: rgb(0, 68, 158);
-}
-
-button.btn-secondary {
-    color: #000;
-    background-color: #eee;
-}
-
-button.btn-primary,
-button.btn-secondary {
-    transition: opacity .15s ease-in;
-    -webkit-appearance: none;
-       -moz-appearance: none;
-    appearance: none;
-    border-radius: 9999px;
-    box-sizing: border-box;
-    display: inline-block;
-    margin: 8px auto;
-    opacity: 1;
-    padding: 8px 16px;
-    text-decoration: none;
-}
-
-.ff-layout-default {
-    padding: 0 !important;
-}
-
-.ff-message {
-    font-size: 1rem !important;
-}
-
-.ff-success {
-    padding: 0 !important;
-    min-height: 0 !important;
-}
-
-.ff-description div:not(#ff-success) {
-    display: none !important;
-    visibility: hidden !important;
-}
-
-.ff-submit-icon {
-    display: none !important;
-    visibility: hidden !important;
-}
-
-input[type="text"], input[type="email"] {
-    -webkit-appearance: none;
-       -moz-appearance: none;
-    display: block;
-    box-sizing: border-box;
-    width: 100%;
-    border: 1px solid rgba(0, 0, 0, 0.2);
-    padding: .5rem;
-    margin-bottom: .5rem;
-}
-</style>
-
     </head>
 
     <body class="sans-serif near-black">
-        <header class="bg-near-black white mb4 mb5-l">
+        <header class="bg-near-black white">
             <div class="ph3 ph4-l mw9 center cf">
                 <div class="fl-l ph4-l pv3 pv4-ns">
                     <h1 class="f4 f3-m f2-l mv0">Steiner <span class="i fw4 baskerville">&amp;</span> Co. Gallery</h1>
@@ -125,7 +18,7 @@ input[type="text"], input[type="email"] {
             </div>
         </header>
 
-        <main class="mw9 ph3 ph4-l mb6 center dark-gray">
+        <main class="mw9 pt4 pt5-l ph3 ph4-l mb6 center dark-gray">
             <section class="cf mb4">
                 <div class="w-100 fl-l ph4-l">
                 <div class="f6 f5-m f4-l tracked ttu">You are Invited</div>
@@ -147,9 +40,7 @@ input[type="text"], input[type="email"] {
 
                 <a href="#rsvp"
                     class="f5 f4-l link dim br-pill ph3 ph4-l pv2 pv3-l mv2 dib white bg-dark-blue"
-                >
-                    Click here to RSVP
-                </a>
+                >Click here to RSVP</a>
             </section>
 
             <section class="cf mb4" id="make-artwork">
@@ -335,7 +226,122 @@ input[type="text"], input[type="email"] {
             </div>
         </main>
 
+        <!-- FormFacade embed script and styles -->
         <script async defer src="https://formfacade.com/include/116794309042804817741/form/1FAIpQLSear1WPAp8qGO9_MSgUUy0FivwemsUqtOsaURPDJ8exroolvA/bootstrap.js?div=ff-compose"></script>
+        <style>
+            form {
+                padding: 0 !important;
+            }
+
+            a.ff-powered-img {
+                visibility: hidden !important;
+            }
+
+            .ff-powered-img img {
+                display: none !important;
+            }
+
+            .ff-title {
+                display: none;
+            }
+
+            .ff-message {
+                margin-bottom: 2rem !important;
+            }
+
+            label {
+                font-size: 1rem;
+                font-weight: bold;
+                display: block;
+                margin-bottom: .5rem;
+            }
+
+            small.ff-help {
+                font-size: 1rem;
+                color: rgba(0, 0, 0, 0.8);
+            }
+
+            label.form-check-label {
+                padding-left: .5rem;
+            }
+
+            button {
+                all: unset;
+            }
+
+            button.btn-primary:active,
+            button.btn-secondary:active {
+                opacity: .8;
+                transition: opacity .15s ease-out;
+            }
+
+            button.btn-primary:focus,
+            button.btn-primary:hover,
+            button.btn-secondary:focus,
+            button.btn-secondary:hover {
+                opacity: .5;
+            }
+
+            button.btn-primary {
+                color: #fff;
+                background-color: rgb(0, 68, 158);
+            }
+
+            button.btn-secondary {
+                color: #000;
+                background-color: #eee;
+            }
+
+            button.btn-primary,
+            button.btn-secondary {
+                transition: opacity .15s ease-in;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                appearance: none;
+                border-radius: 9999px;
+                box-sizing: border-box;
+                display: inline-block;
+                margin: 8px auto;
+                opacity: 1;
+                padding: 8px 16px;
+                text-decoration: none;
+            }
+
+            .ff-layout-default {
+                padding: 0 !important;
+            }
+
+            .ff-message {
+                font-size: 1rem !important;
+            }
+
+            .ff-success {
+                padding: 0 !important;
+                min-height: 0 !important;
+            }
+
+            .ff-description div:not(#ff-success) {
+                display: none !important;
+                visibility: hidden !important;
+            }
+
+            .ff-submit-icon {
+                display: none !important;
+                visibility: hidden !important;
+            }
+
+            input[type="text"],
+            input[type="email"] {
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                display: block;
+                box-sizing: border-box;
+                width: 100%;
+                border: 1px solid rgba(0, 0, 0, 0.2);
+                padding: .5rem;
+                margin-bottom: .5rem;
+            }
+        </style>
     </body>
 </html>
 
