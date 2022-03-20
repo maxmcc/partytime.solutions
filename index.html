@@ -6,10 +6,116 @@
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="stylesheet" href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css"/>
+<style type="text/css">
+form { padding: 0 !important; }
+a.ff-powered-img {
+    visibility: hidden !important;
+}
+.ff-powered-img img { display: none !important; }
+
+.ff-title {
+    display: none;
+}
+
+.ff-message {
+    margin-bottom: 2rem !important;
+}
+
+label {
+    font-size: 1rem;
+    font-weight: bold;
+    display: block;
+    margin-bottom: .5rem;
+}
+
+small.ff-help {
+    font-size: 1rem;
+    color: rgba(0,0,0,0.8);
+}
+
+label.form-check-label {
+    padding-left: .5rem;
+}
+
+button {
+    all: unset;
+}
+
+button.btn-primary:active,
+button.btn-secondary:active {
+    opacity: .8;
+    transition: opacity .15s ease-out;
+}
+button.btn-primary:focus,
+button.btn-primary:hover,
+button.btn-secondary:focus,
+button.btn-secondary:hover {
+    opacity: .5;
+}
+
+button.btn-primary {
+    color: #fff;
+    background-color: rgb(0, 68, 158);
+}
+
+button.btn-secondary {
+    color: #000;
+    background-color: #eee;
+}
+
+button.btn-primary,
+button.btn-secondary {
+    transition: opacity .15s ease-in;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+    appearance: none;
+    border-radius: 9999px;
+    box-sizing: border-box;
+    display: inline-block;
+    margin: 8px auto;
+    opacity: 1;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+.ff-layout-default {
+    padding: 0 !important;
+}
+
+.ff-message {
+    font-size: 1rem !important;
+}
+
+.ff-success {
+    padding: 0 !important;
+    min-height: 0 !important;
+}
+
+.ff-description div:not(#ff-success) {
+    display: none !important;
+    visibility: hidden !important;
+}
+
+.ff-submit-icon {
+    display: none !important;
+    visibility: hidden !important;
+}
+
+input[type="text"], input[type="email"] {
+    -webkit-appearance: none;
+       -moz-appearance: none;
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    padding: .5rem;
+    margin-bottom: .5rem;
+}
+</style>
+
     </head>
 
     <body class="sans-serif near-black">
-
         <header class="bg-near-black white mb4 mb5-l">
             <div class="ph3 ph4-l mw9 center cf">
                 <div class="fl-l ph4-l pv3 pv4-ns">
@@ -28,32 +134,36 @@
                 </h1>
 
                 <p class="f4-m f3-l lh-copy measure measure-wide-l">
-                    The <strong>Steiner &amp; Co.</strong> art gallery, which is definitely a real
-                    thing that exists, will host an opening party on Saturday the <strong>16th of
-                        April</strong> 2022 at <strong>6pm</strong>. The gallery will showcase
-                    <strong>custom artwork</strong> from a range of talented artists attending the
-                    event (including you). Guests will participate in a <strong>silent
-                        auction</strong> and will bid for the opportunity to bring home one of the
-                    items on display, with all auction proceeds donated to charity.
+                    The Steiner &amp; Co. art gallery, which is definitely a real thing that exists,
+                    will host an opening party on Saturday the <strong>16th of April 2022 at
+                    6pm.</strong> The gallery will showcase <strong>one-of-a-kind artwork</strong>
+                    from a range of talented artists attending the event (including you). Guests will
+                    participate in a <strong>silent auction</strong> and will bid for the
+                    opportunity to bring home one of the items on display, with all auction proceeds
+                    donated to the <a href="https://www.sfmfoodbank.org"
+                        class="no-underline bb bw1 b--dark-blue link near-black hover-dark-blue"
+                    >San Francisco&ndash;Marin Food Bank &nearr;</a>.
                 </p>
 
-                <a class="f5 f4-l link dim br-pill ph3 ph4-l pv2 pv3-l mv2 dib white bg-dark-blue" href="#0">
-                    Register your attendance &rarr;
+                <a href="#rsvp"
+                    class="f5 f4-l link dim br-pill ph3 ph4-l pv2 pv3-l mv2 dib white bg-dark-blue"
+                >
+                    Click here to RSVP
                 </a>
             </section>
 
-            <section class="cf mb4">
+            <section class="cf mb4" id="make-artwork">
                 <div class="ph4-l">
                     <h2 class="f3 f2-l bt bw2 pv3">Make and Bring Your Own Artwork</h2>
                 </div>
 
                 <article class="w-50-l fl-l ph4-l f5 f4-l">
                     <p class="lh-copy measure mt0">
-                        We ask that you <em>please do not bring gifts</em> to the party. In lieu of
-                        gifts, your artistic talents and financial patronage will support important
+                        We ask that you please do not bring gifts to the party. In lieu of gifts,
+                        your artistic talents and financial patronage will support important
                         humanitarian causes.
                     </p>
-                    <p class="lh-tight f3 f2-l measure-narrow">
+                    <p class="lh-title f4 f3-l measure bl bw3 b--light-gray pl2 pl4-l">
                         Admittance to the event for any artists donating their personal work is,
                         naturally, free.
                     </p>
@@ -74,25 +184,24 @@
                 <aside class="w-50-l fl-l ph4-l">
                     <div class="f5 f4-l bg-light-gray pa3 pa4-l">
                     <h3 class="f4 f3-l mt0">Types of Art Our Gallery Collects</h3>
-                    <p class="lh-tight measure">
+                    <p class="lh-title measure">
                         As this is a gallery, not a museum, the items contributed to our collection
                         must have some sort of physical embodiment. Digital artworks such as
-                        illustrations or photography should be printed out, though it is acceptable
-                        to send a copy of the digital originals to the purchaser in addition to the
-                        prints.
+                        illustrations or photography should be printed out, though you may also send
+                        a copy of the digital originals to the purchaser in addition to the prints.
                     </p>
                     <!--
-                    <p class="lh-tight measure">
+                    <p class="lh-title measure">
                         If you so much as mention inane concepts like blockchain-mediated digital
                         ownership (“non-fungible tokens”) you will be ejected from the gallery
                         immediately.
                     </p>
                     -->
-                    <p class="lh-tight measure">
+                    <p class="lh-title measure">
                         Performed works such as songs or interpretive dances may be acceptable, so
                         long as some component (e.g., lyrics) can be purchased and taken home.
                     </p>
-                    <p class="lh-tight measure mb0">
+                    <p class="lh-title measure mb0">
                         We only accept finished artworks, so please do not plan on making additions
                         to your project during the event. We do not have a color printer or high
                         quality paper at the gallery.
@@ -101,8 +210,8 @@
                 </aside>
             </section>
 
-            <section class="cf mb4">
-                <div class="w-50-l fl-l ph4-l">
+            <div class="cf">
+                <section class="w-50-l fl-l ph4-l mb4" id="attending">
                     <h2 class="f3 f2-l bt bw2 pv3">Attending the Event</h2>
 
                     <article class="f5 f4-l">
@@ -115,57 +224,118 @@
                             You are welcome to invite your partners or friends to this event. They
                             are also strongly encouraged to produce and submit an art piece for the
                             auction. Please direct them to this website and ensure that they fill
-                            out the <a href="#0"
-                                class="no-underline bb bw1 b--dark-blue link near-black"
-                                >RSVP form &nearr;</a>.
+                            out the RSVP form.
                         </p>
                         <p class="lh-copy measure">
                             The gallery requires patrons to be <a
                                 class="no-underline bb bw1 b--dark-blue link near-black hover-dark-blue"
                                 href="https://www.cdc.gov/coronavirus/2019-ncov/vaccines/stay-up-to-date.html"
                             >up to date &nearr;</a> on all vaccinations, including (but not limited
-                            to) a vaccine for SARS-CoV-2, the virus that causes COVID-19.
+                            to) full vaccination and booster doses for SARS-CoV-2, the virus that
+                            causes COVID-19.
                         </p>
                     </article>
-                </div>
+                </section>
 
-                <div class="w-50-l fl-l ph4-l">
-                    <h2 class="f3 f2-l bt bw2 pv3">Schedule of Events</h2>
+                <section class="w-50-l fl-l ph4-l mb4" id="rsvp">
+                    <h2 class="f3 f2-l bt bw2 pv3">RSVP Form</h2>
+                    <div id="ff-compose" class=""></div>
+                </section>
+            </div>
+
+            <div class="cf">
+                <section class="w-50-l fl-l ph4-l mb4" id="what-to-wear">
+                    <h2 class="f3 f2-l bt bw2 pv3">What to Wear</h2>
+
+                    <article class="f5 f4-l">
+                        <p class="lh-copy measure">
+                            There is no specific dress code for this event, but artists and patrons
+                            alike should remember that in the world of fine art, it is always
+                            important to make a statement. Consider your own personal brand and how
+                            best to represent yourself and your work.
+                        </p>
+                        <p class="lh-copy measure">
+                            Everybody gets stuck in a creative rut now and again, and so it can be
+                            helpful to consult a set of prompts to find inspiration. To that end,
+                            here are some suggestions:
+                        </p>
+                        <ul class="list lh-title measure-wide pl2 pl4-l bl bw3 b--light-gray">
+                            <li class="">Something you otherwise have no reason to wear</li>
+                            <li class="">Dirty paint smocks</li>
+                            <li class="">Weird tie-dye</li>
+                            <li class="">Billowing, formless shapes</li>
+                            <li class="">A very uncommon hat</li>
+                            <li class="">Your fifth grade art teacher</li>
+                            <li class="">Your fifth grade art teacher’s worst student</li>
+                            <li class="">Pick one of Brian Eno’s <a
+                                    href="https://stoney.sb.org/eno/oblique.html"
+                                    class="no-underline bb bw1 b--dark-blue link near-black hover-dark-blue"
+                                ><em>Oblique Strategies</em> &nearr;</a>
+                            </li>
+                        </ul>
+                    </article>
+                </section>
+
+                <section class="w-50-l fl-l ph4-l mb4" id="schedule">
+                    <h2 class="f3 f2-l bt bw2 pv3">Program Schedule</h2>
                     <table class="w-100" cellspacing="0">
                         <tr class="striped--light-gray">
-                            <td class="tr pa3 v-top">6pm</td>
-                            <td class="v-top pa3">
-                                <h3 class="mt0">Arrive and set up your artwork for display</h3>
-
-                                <p class="mb0 measure">
-                                    Depending on your artwork, the gallery will assign you space on
-                                    a shelf, table, or wall.
+                            <td class="tr pa2 pa3-l v-top">6pm</td>
+                            <td class="pa2 pa3-l v-top">
+                                <h3 class="mt0 f5 f4-l">Arrive and set up your artwork for display</h3>
+                                <p class="mb0 measure lh-title">
+                                    Depending on your work of art, the gallery will assign you space
+                                    on a shelf, table, or wall. Once you have installed your piece,
+                                    the party can begin!
                                 </p>
                             </td>
                         </tr>
                         <tr class="striped--light-gray">
-                            <td class="tr pa3">6pm – 8pm</td>
-                            <td class="v-top pa3">
-                                <div class="b">
-                                Artists’ reception featuring small bites and bubbles
+                            <td class="tr pa2 pa3-l v-top">6&ndash;8pm</td>
+                            <td class="pa2 pa3-l v-top">
+                                <h3 class="mt0 f5 f4-l">Artists’ reception featuring small bites and
+                                    bubbles</h3>
+                                <p class="mb0 measure lh-title">
+                                    Meet your fellow artists, mingle with the patrons of the
+                                    gallery, and sample a wide assortment of hors-d’œuvres fresh
+                                    from the Trader Joe’s freezer aisle. As is required for a fancy
+                                    event, sparkling wine and cider willl be provided.
+                                </p>
                             </td>
                         </tr>
                         <tr class="striped--light-gray">
-                            <td class="tr pa3">8pm</td>
-                            <td>
-                                Presentation of works, art criticism, and appraisal
+                            <td class="tr pa2 pa3-l v-top">8pm</td>
+                            <td class="pa2 pa3-l v-top">
+                                <h3 class="mt0 f5 f4-l">Presentation of works, art criticism, and
+                                    appraisal</h3>
+                                <p class="mb0 measure lh-title">
+                                    We will take a tour of the gallery together and view each of the
+                                    pieces that are up for auction. Bidders will hear directly from
+                                    the artists about their work, and will have the opportunity to
+                                    ask them questions and provide thoughtful critique.
+                                </p>
                             </td>
                         </tr>
                         <tr class="striped--light-gray">
-                            <td class="tr pa3">10pm</td>
-                            <td>
-                                Bidding in silent auction concludes
+                            <td class="tr pa2 pa3-l v-top">10pm</td>
+                            <td class="pa2 pa3-l v-top">
+                                <h3 class="mt0 f5 f4-l">Bidding in the silent auction concludes</h3>
+                                <p class="mb0 measure lh-title">
+                                    At last, the auction winners are revealed. Some will rejoice,
+                                    and others will despair. It is important to keep in mind the
+                                    most important rule of the fine art world&mdash;and also
+                                    elementary school gym class&mdash;<em>if you had fun, you
+                                    won</em>.
+                                </p>
                             </td>
                         </tr>
                     </table>
-                </div>
-            </section>
+                </section>
+
+            </div>
         </main>
+
+        <script async defer src="https://formfacade.com/include/116794309042804817741/form/1FAIpQLSear1WPAp8qGO9_MSgUUy0FivwemsUqtOsaURPDJ8exroolvA/bootstrap.js?div=ff-compose"></script>
     </body>
 </html>
 
