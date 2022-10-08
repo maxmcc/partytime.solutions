@@ -87,12 +87,6 @@ body {
     font-weight: bold;
 }
 
-.calendar_aside {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 20px;
-}
-
 .title_jackolantern {
     height: 200px;
     position: absolute;
