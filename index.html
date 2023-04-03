@@ -7,14 +7,15 @@
         <meta property="og:title" content="Max’s 29th Birthday Party">
         <meta property="og:image" content="https://partytime.solutions/public/linkpreview.jpg">
         <style type="text/css">
-:root {
+html {
+    height: 100%;
     background: #EFE7E6;
     margin: 0;
 }
+body {
+    min-height: 100%;
+}
 
-        html { height: 100%; }
-
-        body { min-height: 100%; }
 * {
     box-sizing: border-box;
     margin: 0;
@@ -23,22 +24,19 @@
 }
 
 .toggle {
+    -webkit-appearance: none;
     appearance: none;
 }
 
 .label {
     display: grid;
-        height: 100%;
+    height: 100%;
     gap: 0px 0px;
     grid-template-areas:
         ". . ."
         "button-left card button-right"
         ". button-below .";
 }
-
-.button-right { grid-area: button-right; }
-.button-left { grid-area: button-left; }
-.button-below { grid-area: button-below; }
 
 .button {
     border-radius: 20px;
@@ -87,12 +85,12 @@
 }
 
 @keyframes pulse-animation {
-  0% {
-    box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.2);
-  }
-  100% {
-    box-shadow: 0 0 0 20px rgba(0, 0, 0, 0);
-  }
+    0% {
+        box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.2);
+    }
+    100% {
+        box-shadow: 0 0 0 20px rgba(0, 0, 0, 0);
+    }
 }
 
 .card {
@@ -137,6 +135,7 @@
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(0,0,0,0.2);
     backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
 }
 
 .front {
@@ -156,31 +155,31 @@
         <input type="checkbox" id="toggle" class="toggle"></input>
         <label for="toggle" class="label">
 
-        <section class="card">
-            <div class="content">
-                <div class="front">
-                    <span role="img" aria-label="Max and Travis request the pleasure of your company
-                    at a garden party in celebration of Max’s 29th birthday at 2pm on Sunday,
-                    April 16">
-                    </span>
-                </div>
+            <section class="card">
+                <div class="content">
+                    <div class="front">
+                        <span role="img" aria-label="Max and Travis request the pleasure of your company
+                        at a garden party in celebration of Max’s 29th birthday at 2pm on Sunday,
+                        April 16">
+                        </span>
+                    </div>
 
-                <div class="back">
-                    <span role="img" aria-label="We’re all tired of the rain. So let’s have a garden
-                    party and pretend it’s summertime. Afternoon tea fare and drinks will be served.
-                    RSVP: Please bring friends if you would like, and feel free to share this
-                    invitation. RSVP by text to Max or Travis and let us know how many in your party
-                    will attend. Dress code: Please wear garden party attire. Think floral patterns,
-                    Sunday best, tea dresses, and linen pants. (Suits optional, but please not
-                    black.) Unless it rains, the party will take place mostly outdoors. Please
-                    ensure that you will be warm enough">
-                    </span>
+                    <div class="back">
+                        <span role="img" aria-label="We’re all tired of the rain. So let’s have a garden
+                        party and pretend it’s summertime. Afternoon tea fare and drinks will be served.
+                        RSVP: Please bring friends if you would like, and feel free to share this
+                        invitation. RSVP by text to Max or Travis and let us know how many in your party
+                        will attend. Dress code: Please wear garden party attire. Think floral patterns,
+                        Sunday best, tea dresses, and linen pants. (Suits optional, but please not
+                        black.) Unless it rains, the party will take place mostly outdoors. Please
+                        ensure that you will be warm enough">
+                        </span>
+                    </div>
                 </div>
+            </section>
+
+            <div class="button">
             </div>
-        </section>
-
-        <div class="button">
-        </div>
         </label>
     </body>
 </html>
