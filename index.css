@@ -114,7 +114,7 @@ body {
     height: 80px;
 }
 
-.sponsor {
+.benefactor {
     height: 140px;
     width: 140px;
     margin-left: 10px;
@@ -126,7 +126,7 @@ body {
     animation-play-state: running;
 }
 
-.sponsor:hover {
+.benefactor:hover {
     animation-play-state: paused;
 }
 
