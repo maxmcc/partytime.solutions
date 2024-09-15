@@ -13,11 +13,11 @@
     overflow-x: hidden;
     background-image: url("public/images/nether.gif");
     background-repeat: repeat;
+    cursor: url("public/images/cursor.cur") 8 3, auto;
 }
 
 body {
     background-color: transparent !important;
-    cursor: url("public/images/skeletoncursor.jpeg"),default;
 }
 
 .monster-mash {
@@ -97,8 +97,37 @@ body {
     animation-timing-function: linear;
 }
 
+.title_theLightingSection {
+    animation-name: titleTheLightingSection;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes titleTheLightingSection {
+    0% {transform: rotate(-10deg)}
+    50% {transform: rotate(10deg)}
+    100% {transform: rotate(-10deg)}
+}
+
 .mobile-ghosts {
     height: 80px;
+}
+
+.sponsor {
+    height: 140px;
+    width: 140px;
+    margin-left: 10px;
+    margin-right: 10px;
+    animation-name: titleTheLightingSection;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-play-state: running;
+}
+
+.sponsor:hover {
+    animation-play-state: paused;
 }
 
 @keyframes jackolantern {
@@ -118,6 +147,7 @@ body {
 @media(prefers-reduced-motion) {
     * {
         animation: none !important;
+        cursor: default !important;
     }
 }
 
@@ -327,12 +357,6 @@ details:not(:last-child) {
 
 #eyesPic {
     display: none
-}
-#theLightingSection:hover #eyesPic {
-    display: block !important
-}
-#theLightingSection:hover #normalPic {
-    display: none !important
 }
 
 
