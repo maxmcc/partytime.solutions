@@ -22,14 +22,13 @@
   </head>
 
   <body>
-    <img
-      src="public/images/hangingskeleton.gif"
-      style="position: fixed; top: 0; left: calc(var(--gutter) + (100vw - 50rem) / 2)"
-    />
+    <div class="wrapper">
+      <img src="public/images/hangingskeleton.gif" style="position: absolute; top: 0" />
+    </div>
     <main style="margin-block: 3rem">
       <section
         class="wrapper center flow"
-        style="background: black; border: 0.25rem inset orangered"
+        style="background: black; border: 0.75rem inset orangered"
       >
         <p>partytime.solutions presents…</p>
         <img src="public/images/face.png" style="max-width: 20rem; --flow-space: 5rem" />
@@ -47,8 +46,12 @@
         </p>
         <p>please note that this is the weekend <em>before</em> halloween, which is a friday</p>
 
-        <div class="center" style="color: limegreen; border: 0.2rem double limegreen">
+        <div
+          class="center"
+          style="color: limegreen; border: 0.5rem double limegreen; padding: var(--gutter)"
+        >
           <div class="flow">
+            <p style="font-style: italic">“we sold our souls to Partiful”</p>
             <a target="_blank" href="https://partiful.com/e/Tkg7MsvBEoa2TsOyzG2l" class="h2"
               >rsvp here on partiful</a
             >
@@ -95,22 +98,33 @@
       <section class="wrapper flow faq" style="--gutter: 0; font-size: var(--font-size-1)">
         <style>
           .faq details {
-            border: 0.25rem outset limegreen;
+            --border: limegreen;
+            --fill: forestgreen;
+
+            border: 0.25rem outset var(--border);
             background: black;
 
             summary {
               font-weight: bold;
-              background: forestgreen;
+              background: var(--fill);
               font-family: Tahoma, Arial, sans-serif;
               padding-block: 0.25rem;
+            }
+
+            &:nth-child(2n) {
+              --border: rebeccapurple;
+              --fill: indigo;
             }
           }
         </style>
 
-        <h2>faq’s or whatever</h2>
+        <div class="repel">
+          <h2>faq’s or whatever</h2>
+          <p style="font-size: 1rem">(sound on)</p>
+        </div>
 
         <div class="flow">
-          <details id="what-is-this" open>
+          <details id="what-is-this">
             <summary>why am i on this website?</summary>
             <ul>
               <li>Max and Travis are having a party</li>
@@ -255,7 +269,100 @@
           </div>
         </div>
       </section>
+
+      <section class="wrapper">
+        <h2>and now a word from our sponsors…</h2>
+
+        <div class="benefactors">
+          <a href="https://www.tiktok.com/@notkillmurphy/video/7212759877159046443">
+            <img src="public/images/White-Claw-logo-border.png" />
+          </a>
+          <a href="https://www.tiktok.com/@jennash1984/video/7405742038009908485">
+            <img src="public/images/Spirit-Halloween-logo.png" />
+          </a>
+          <a href="https://www.youtube.com/watch?v=Wb3UrJjAac4">
+            <img src="public/images/tacobell.png" />
+          </a>
+        </div>
+
+        <style>
+          .benefactors {
+            display: flex;
+            border: 0.25rem solid white;
+            gap: var(--gutter);
+            justify-content: center;
+            padding: var(--gutter);
+
+            a {
+              border: 0.25rem solid white;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              aspect-ratio: 1;
+            }
+
+            a img {
+              max-width: 10rem;
+              max-height: 10rem;
+            }
+          }
+        </style>
+      </section>
     </main>
+
+    <footer>
+      <div class="wrapper center">
+        <img src="public/images/halloween-fire.gif" />
+      </div>
+
+      <div class="wrapper badges" style="--wrapper-max-width: 35rem">
+        <img src="public/images/badges/netscape.gif" />
+        <img src="public/images/badges/under-construction.png" />
+        <img src="public/images/badges/ie-evil.gif" />
+        <img src="public/images/badges/html.gif" />
+        <img src="public/images/badges/css.gif" />
+        <img src="public/images/badges/flash.png" />
+        <img src="public/images/badges/hi-colors.gif" />
+        <img src="public/images/badges/aol.gif" />
+        <img src="public/images/badges/questions.gif" />
+        <img src="public/images/badges/horror.gif" />
+        <a href="https://archive.org/donate">
+          <img src="public/images/badges/internet-archive.gif" />
+        </a>
+        <img src="public/images/badges/imac.gif" />
+        <img src="public/images/badges/goth-girls.gif" />
+        <img src="public/images/badges/happy-halloween.gif" />
+        <img src="public/images/badges/graphic-design.png" />
+        <img src="public/images/badges/sun.gif" />
+        <img src="public/images/badges/eyes.gif" />
+        <img src="public/images/badges/warning.gif" />
+        <img src="public/images/badges/trick-or-treat.gif" />
+        <img src="public/images/badges/the-void.gif" />
+        <img src="public/images/badges/virus-alert.gif" />
+        <img src="public/images/badges/everything.gif" />
+        <img src="public/images/badges/cheezit.gif" />
+        <img src="public/images/badges/hail-satan.gif" />
+        <img src="public/images/badges/gba.png" />
+        <img src="public/images/badges/osama.gif" />
+        <img src="public/images/badges/dolphin-meat.gif" />
+        <img src="public/images/badges/smile.gif" />
+      </div>
+    </footer>
+
+    <style>
+      .badges {
+        display: flex;
+        gap: 0.5rem;
+        flex-wrap: wrap;
+        justify-content: center;
+        image-rendering: pixelated;
+
+        > img {
+          width: 88px;
+          height: 31px;
+        }
+      }
+    </style>
 
     <script type="text/javascript">
       window.addEventListener("DOMContentLoaded", (event) => {
