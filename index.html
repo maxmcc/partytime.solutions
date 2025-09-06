@@ -9,12 +9,17 @@
     <meta property="og:description" content="Viewer beware: you’re in for a scare" />
     <meta
       property="og:image"
-      content="https://partytime.solutions/public/images/link-preview.png"
+      content="https://partytime.solutions/public/images/link-preview-2025.png"
     />
 
     <link rel="stylesheet" type="text/css" href="index.css" />
 
     <style>
+      :root {
+        --heading-font: Tahoma, Verdana, Arial, sans-serif;
+        --body-font: "Times New Roman", Times, serif;
+      }
+
       main > section + section {
         margin-block-start: 2rem !important;
       }
@@ -22,16 +27,26 @@
   </head>
 
   <body>
-    <div class="wrapper">
-      <img src="public/images/hangingskeleton.gif" style="position: absolute; top: 0" />
+    <div class="wrapper" aria-hidden="true">
+      <img
+        src="public/images/hangingskeleton.gif"
+        style="position: absolute; top: 0"
+        role="presentation"
+        alt=""
+      />
     </div>
+
     <main style="margin-block: 3rem">
       <section
         class="wrapper center flow"
         style="background: black; border: 0.75rem inset orangered"
       >
         <p>partytime.solutions presents…</p>
-        <img src="public/images/face.png" style="max-width: 20rem; --flow-space: 5rem" />
+        <img
+          src="public/images/face.png"
+          style="max-width: 20rem; --flow-space: 5rem"
+          alt="A scary jack-o-lantern face"
+        />
         <h1 style="text-shadow: 0.2ex 0.2ex 0.5ex orangered">A Nightmare on Fifteenth Street</h1>
         <p class="h2" style="font-style: italic">A Halloween Extravaganza</p>
       </section>
@@ -85,7 +100,7 @@
             <img
               src="public/images/TLSSabotage.jpg"
               style="max-width: 20rem"
-              alt="A photo of the band The Lighting Section, in the style of Black Sabbath's album Sabotage"
+              alt="A photo of the band The Lighting Section, in the style of Black Sabbath’s album Sabotage"
             />
             <figcaption style="font-style: italic; text-wrap: balance">
               please note: this is actually a picture of The Lighting&nbsp;Section, not
@@ -98,8 +113,8 @@
       <section class="wrapper flow faq" style="--gutter: 0; font-size: var(--font-size-1)">
         <style>
           .faq details {
-            --border: limegreen;
-            --fill: forestgreen;
+            --border: color(display-p3 0.205 1 0);
+            --fill: color(display-p3 0.1 0.49 0);
 
             border: 0.25rem outset var(--border);
             background: black;
@@ -107,13 +122,13 @@
             summary {
               font-weight: bold;
               background: var(--fill);
-              font-family: Tahoma, Arial, sans-serif;
+              font-family: var(--heading-font);
               padding-block: 0.25rem;
             }
 
             &:nth-child(2n) {
-              --border: rebeccapurple;
-              --fill: indigo;
+              --border: color(display-p3 0.291 0 0.657);
+              --fill: color(display-p3 0.27 0 0.539);
             }
           }
         </style>
@@ -206,7 +221,7 @@
 
       <section
         class="wrapper flow"
-        style="background: black; border: 0.5rem ridge color(display-p3 0.768 0.162 0.251)"
+        style="background: black; border: 0.75rem ridge color(display-p3 0.768 0.162 0.251)"
       >
         <h2>here is the playlist</h2>
 
@@ -228,10 +243,10 @@
           </style>
           <fieldset role="radiogroup">
             <legend>Choose your fighter:</legend>
-            <label
-              ><input type="radio" name="music" id="apple-music-input" checked />Apple Music</label
-            >
-            <label><input type="radio" name="music" id="spotify-input" />Spotify</label>
+            <label>
+              <input type="radio" name="music" id="apple-music-input" checked /> Apple Music
+            </label>
+            <label><input type="radio" name="music" id="spotify-input" /> Spotify</label>
           </fieldset>
           <div id="apple-music-option">
             <iframe
@@ -270,17 +285,16 @@
         </div>
       </section>
 
-      <section class="wrapper">
+      <section class="wrapper" style="--gutter: 0">
         <h2>and now a word from our sponsors…</h2>
-
-        <div class="benefactors">
-          <a href="https://www.tiktok.com/@notkillmurphy/video/7212759877159046443">
+        <div class="benefactors" style="--gutter: 1rem">
+          <a target="_blank" href="https://www.tiktok.com/@notkillmurphy/video/7212759877159046443">
             <img src="public/images/White-Claw-logo-border.png" />
           </a>
-          <a href="https://www.tiktok.com/@jennash1984/video/7405742038009908485">
+          <a taret="_blank" href="https://www.tiktok.com/@jennash1984/video/7405742038009908485">
             <img src="public/images/Spirit-Halloween-logo.png" />
           </a>
-          <a href="https://www.youtube.com/watch?v=Wb3UrJjAac4">
+          <a target="_blank" href="https://www.youtube.com/watch?v=Wb3UrJjAac4">
             <img src="public/images/tacobell.png" />
           </a>
         </div>
@@ -299,6 +313,7 @@
               align-items: center;
               justify-content: center;
               aspect-ratio: 1;
+              padding: var(--gutter);
             }
 
             a img {
@@ -420,199 +435,5 @@
         });
       });
     </script>
-
-    <!-- <div style="max-width: 960px; margin: 0 auto; z-index: 10">
-      <div class="monster-mash">
-        <img class="mobile-ghosts boring-left-ghost" src="public/images/ghost.gif" />
-        <img class="mobile-ghosts" src="public/images/bat.gif" />
-        <img class="mobile-ghosts boring-right-ghost reverse-image" src="public/images/ghost.gif" />
-      </div>
-
-      <div class="header-container" style="margin-bottom: 10px">
-        <img class="ghostLeft ghost-busters" src="public/images/ghost.gif" />
-        <div style="text-align: center">
-          <aside>You are cordially invited to</aside>
-          <h1 style="margin: 0px 0px 10px 0px">A Nightmare on 15th Street</h1>
-          <h2 style="font-size: 22px; margin: 0px 0px 10px 0px">A Halloween Extravaganza</h2>
-        </div>
-        <img class="ghostRight ghost-busters" src="public/images/ghost.gif" />
-      </div>
-
-      <div class="monster-mash">
-        <img class="mobile-ghosts boring-left-ghost" src="public/images/ghost.gif" />
-        <img class="mobile-ghosts" src="public/images/bat.gif" />
-        <img class="mobile-ghosts boring-right-ghost reverse-image" src="public/images/ghost.gif" />
-      </div>
-
-      <div style="text-align: center">
-        <h3>from 8 to L8 on Saturday October 25th</h3>
-      </div>
-
-      <div class="header-container">
-        <img class="header-gif" src="public/images/frankenstein.gif" />
-        <h2>Musical Guest</h2>
-        <img class="header-gif reverse-image" src="public/images/frankenstein.gif" />
-      </div>
-
-      <div style="height: 1px; margin-top: 20px"></div>
-
-      <div class="header-container">
-        <img class="header-gif" src="public/images/otherjackolantern.gif" />
-        <h2>FAQ</h2>
-        <img class="header-gif reverse-image" src="public/images/otherjackolantern.gif" />
-      </div>
-      <ul>
-        <details id="what-is-this">
-          <summary>why am i on this website?</summary>
-          <ul>
-            <li>Max and Travis are having a party</li>
-            <li>clearly they invited you, because you are here</li>
-          </ul>
-        </details>
-
-        <details id="invite">
-          <summary>sounds <em>rad</em>, Can i come to the party?</summary>
-          <ul>
-            <li>You can, if you...</li>
-            <ul>
-              <li>text us to tell us that you are coming, ideally</li>
-              <li>are in costume</li>
-              <li>
-                and you know Max or Travis personally, or one of the guests, rather than just being
-                some random person on the internet who found this website.
-              </li>
-            </ul>
-            <li>ask a punk for the address</li>
-          </ul>
-        </details>
-
-        <details id="covid">
-          <summary>ok, but what about the 'vid?</summary>
-          <ul>
-            <li>man i <em>loooove</em> rfk jr hes my absolute fave</li>
-            <ul>
-              <li>did you know i picked up smoking again?</li>
-            </ul>
-            <li>please do not come if you are feeling sick</li>
-            <li>also a lot of this party will be outdoors if indoors isnt comfy</li>
-          </ul>
-        </details>
-
-        <details id="byob">
-          <summary>you've convinced me, can i bring anything?</summary>
-          <ul>
-            <li>a smile 👉👈</li>
-            <li>
-              we'll have enough alcohol and mixers for the class, but if you want something specific
-              don't let me stop you, I'm just a website
-            </li>
-            <li>
-              if any of you heathens partake in those left handed cigarettes, feel free to bring
-              them - we will not provide them
-            </li>
-          </ul>
-        </details>
-
-        <details id="turn-off-taco-bell">
-          <summary>was that the taco bell noise?</summary>
-          <ul>
-            <li>SORRY WHAT?!?!?</li>
-            <li>I CAN'T HEAR YOU OVER ALL THIS MÁS I'M LIVING!!!</li>
-          </ul>
-        </details>
-
-        <details id="white-claw">
-          <summary>white claw addendum (2024)</summary>
-          <ul>
-            <li>this event is already sponsored by white claw</li>
-            <li>
-              pls consider bringing something other than white claw or bring only as much as you
-              want to drink
-            </li>
-            <li>
-              we appreciate you, but with peace and love, we don't need 200 leftover claws come
-              november 1st
-            </li>
-          </ul>
-        </details>
-      </ul>
-
-      <div class="header-container">
-        <img class="header-gif" src="public/images/witch3.gif" />
-        <h2>RSVP</h2>
-        <img class="header-gif reverse-image" src="public/images/witch3.gif" />
-      </div>
-
-      <p>
-        we sold our souls to partiful<br />but yeah, you know the drill, bring whoever, just keep us
-        posted.
-      </p>
-
-      <div class="header-container">
-        <img class="header-gif" src="public/images/dancing-skeleton.gif" />
-        <h2>The tunes</h2>
-        <img class="header-gif reverse-image" src="public/images/dancing-skeleton.gif" />
-      </div>
-      need something to listen to while putting on hours of prosthetics for yr sickass costume?
-      <br />
-      the party playlist will do just the trick
-      <br />
-      enjoy this eclectic mix of ska, darkwave, and the Donnie Darko soundtrack
-      <br />
-      <div style="height: 1px; margin-bottom: 20px"></div>
-
-      <div style="text-align: center">
-        <h2>sponsored by:</h2>
-        <div style="display: flex; justify-content: center">
-          <a
-            class="benefactor-link"
-            href="https://www.tiktok.com/@notkillmurphy/video/7212759877159046443"
-          >
-            <img class="benefactor" src="public/images/White-Claw-logo-border.png" />
-          </a>
-          <a
-            class="benefactor-link"
-            href="https://www.tiktok.com/@jennash1984/video/7405742038009908485"
-          >
-            <img class="benefactor" src="public/images/Spirit-Halloween-logo.png" />
-          </a>
-          <a class="benefactor-link" href="https://www.youtube.com/watch?v=Wb3UrJjAac4">
-            <img class="benefactor" src="public/images/tacobell.png" />
-          </a>
-        </div>
-      </div>
-
-      <div style="height: 1px; margin-top: 40px"></div>
-
-      <div class="popupContainer" id="popup">
-        <div class="popupHeader">x</div>
-        <div class="popupContent">
-          <img src="public/images/smiley.png" id="normal" style="height: 40px; margin: 0px 10px" />
-          <img
-            src="public/images/cursed2.jpeg"
-            id="cursed"
-            style="height: 40px; margin: 0px 10px"
-          />
-          <div class="popupText">
-            <span class="popupTitle">Congratulations!</span>
-            <span style="font-size: 14px" id="normalText"
-              >Woe to you, oh Earth and Sea, your'e the 666th visiter of this site :)</span
-            >
-            <span style="font-size: 14px" id="cursedText"
-              >Woe to you, oh Earth and Sea, your'e the 666th visiter of this site &gt;:)</span
-            >
-            <a
-              class="popupButton"
-              href="https://www.youtube.com/watch?v=eZFT7odS-2I&ab_channel=tanadi"
-              >Claim your prize</a
-            >
-          </div>
-        </div>
-      </div>
-
-      <div style="height: 1px; margin-top: 20px"></div>
-    </div>
-
--->
   </body>
 </html>
